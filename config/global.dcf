@@ -8,7 +8,7 @@ munging: TRUE
 logging: TRUE
 logging_level: DEBUG
 load_libraries: TRUE
-libraries: reshape2, plyr, tidyverse, stringr, lubridate, data.table, jsonlite, caret
+libraries: reshape2, plyr, tidyverse, stringr, lubridate, data.table, jsonlite, caret, FSelector
 as_factors: FALSE
 tables_type: data_table
 attach_internal_libraries: FALSE

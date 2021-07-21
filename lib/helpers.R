@@ -1,13 +1,13 @@
 logger <- logger()
 
-make_json <- function(covid19.data.dt, filename) {
+make_json <- function(covid19.data.dt, patient_list, filename) {
     covid.data <- list()
     covid.data$time_index <- sort(unique(covid19.dt[, TINDEX]))
     covid.data$info <- list()
     covid.data$data <- list()
     covid.data$outcome <- list()
 
-    for(i in patient_list[, PATIENT]) {
+    for(i in patient_list) {
         covid19.dt.i <- covid19.data.dt[PATIENT == i]
         setorderv(covid19.dt.i, "TINDEX")
         outcome.i <- covid19.dt.i[1, OUTCOME]
